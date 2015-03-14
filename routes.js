@@ -35,7 +35,7 @@ module.exports = [
       var output = process.cwd() + '/usercontent/simc/' + file;
       output = output.replace(/\\/g, '/');
       fs.writeFileSync(output + '.simc', conf);
-      var cmd = srv.conf.bin + ' ' + output + '.simc html=' + output + (req.body.spec? ' spec=' + req.body.spec : '');
+      var cmd = srv.config.bin + ' ' + output + '.simc html=' + output + (req.body.spec? ' spec=' + req.body.spec : '');
       if (typeof req.session.simc === 'undefined') req.session.simc = {};
       req.session.simc[time] = req.body;
       req.session.simc[time].time = new Date(time);
