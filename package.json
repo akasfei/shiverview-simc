@@ -1,19 +1,16 @@
 {
-  "name": "shiverview-boilerplate",
+  "name": "shiverview-simc",
   "version": "0.1.0",
-  "description": "Sample application of project Shiverview",
+  "description": "World of Warcraft: Simulationcraft",
   "main": "index.js",
-  "scripts": {
-    "test": "grunt test"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ssiops/shiverview-boilerplate.git"
+    "url": "https://github.com/akasfei/shiverview-simc.git"
   },
   "author": "akasfei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ssiops/shiverview-boilerplate/issues"
+    "url": "https://github.com/akasfei/shiverview-simc/issues"
   },
-  "homepage": "https://github.com/ssiops/shiverview-boilerplate"
+  "homepage": "https://github.com/akasfei/shiverview-simc"
 }
