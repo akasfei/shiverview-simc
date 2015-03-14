@@ -1,0 +1,20 @@
+<div class="jumbotron container">
+  <h1>Welcome to Simulationcraft.</h1>
+  <p>Powered by SSIOPS Computing Engine</p>
+</div>
+<div class="container">
+  <h3>Your recent simulation results are listed here:</h3>
+  <div class="row">
+    <div class="col-md-4" ng-repeat="r in results">
+      <div class="card">
+        <div class="card-content">
+          <h3>{{r.character}}</h3>
+          <p>{{r.realm}} - {{r.region}}</p>
+          <a class="btn" ng-href="{{r.href}}" ng-class="{disabled: !r.href, 'btn-primary': !r.err, 'btn-danger': r.err}">{{r.err?'Error':(r.href?'View':'Simulating')}}</a>
+          <h6>{{r.time}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-success" ng-click="get()">Refresh</button>
+</div>

@@ -1,0 +1,22 @@
+<div class="jumbotron container">
+  <h1>Welcome to Simulationcraft.</h1>
+  <p>Powered by SSIOPS Computing Engine</p>
+</div>
+<form class="container center-aligned" name="simcForm" ng-submit="submit($event)">
+  <h3>Choose your region:</h3>
+  <div class="btn-group">
+    <label class="btn btn-primary" ng-model="payload.region" btn-radio="'CN'">CN</label>
+    <label class="btn btn-primary" ng-model="payload.region" btn-radio="'US'">US</label>
+    <label class="btn btn-primary" ng-model="payload.region" btn-radio="'EU'">EU</label>
+    <label class="btn btn-primary" ng-model="payload.region" btn-radio="'TW'">TW</label>
+    <label class="btn btn-primary" ng-model="payload.region" btn-radio="'KR'">KR</label>
+  </div>
+  <h3>Enter your realm and character name:</h3>
+  <div class="form-group" ng-class="{'has-error': !simcForm.realm.$valid && realmBlurred}">
+    <input type="text" name="realm" ng-model="payload.realm" class="form-control" placeholder="Realm" required ng-blur="realmBlurred=true">
+  </div>
+  <div class="form-group" ng-class="{'has-error': !simcForm.character.$valid && characterBlurred}">
+    <input type="text" name="character" ng-model="payload.character" class="form-control" placeholder="Character name" required ng-blur="characterBlurred=true">
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg btn-block" ng-class="{disabled: !simcForm.$valid || simulating}">{{simulating?'Simulating...':'Simulate!'}}</button>
+</form>

@@ -1,0 +1,21 @@
+{
+  "name": "shiverview-simc",
+  "desc": "World of Warcraft: Simulationcraft",
+  "path": "/simc",
+  "static": "static",
+  "ui": {
+    "icon": "favicon.png",
+    "navName": "Simulationcraft",
+    "drawerName": "Simulationcraft",
+    "index": 1,
+    "views": {
+      "/simulate": {"scope": "everyone", "title": "Simulate", "url": "/simc.html", "ctrl": "simcCtrl"},
+      "/results": {"scope": "everyone", "title": "Results", "url": "/results.html", "ctrl": "simcResCtrl"}
+    },
+    "scripts": "controller.js"
+  },
+  "privileges": {},
+  "dependencies": {
+    "shiverview-core-ui": "*"
+  }
+}
